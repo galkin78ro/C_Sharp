@@ -6,22 +6,19 @@
     if ( y is > 99 and < 1000 )
     {   
         int d = y / 10 % 10;
-        Console.WriteLine("В введенном числе, вторая цифра - " + d );
-        return; 
-    }else  
-    Console.WriteLine("Введено недопустимое число");
+        Console.WriteLine("В введенном числе, вторая цифра - " + d );}
+    else 
+    { 
+        Console.WriteLine("Введено недопустимое число");}
 }
-
 Console.WriteLine("Введите номер задания");
 int x = int.Parse(Console.ReadLine());
 if (x == 10)
     {
-    Problem10 ();
-    }
+    Problem10 ();}
 else 
     {
-    Console.WriteLine("Задания с таким номером не обнаружено");
-    }
+    Console.WriteLine("Задания с таким номером не обнаружено");}
 
 
 
