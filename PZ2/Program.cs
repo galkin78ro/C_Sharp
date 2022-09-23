@@ -28,6 +28,24 @@ void Problem13 ()
         { 
         Console.WriteLine("Введеное число меньше допустимого предела. Третья цифра отсутствует");}   
 }
+void Problem15 ()
+{
+    Console.WriteLine("Программа для определения выходных дней недели");
+    Console.WriteLine("Введите число от 1 до 7");
+    int y = int.Parse(Console.ReadLine());
+    if ( y is > 0 and < 8 )
+    {   
+        if ( y is > 0 and < 6 )
+        {
+            Console.WriteLine("К сожалению данный день является рабочим");}
+        else
+        {
+            Console.WriteLine("УРА! Сегодня выходной");}       
+    }
+    else
+    {
+        Console.WriteLine("Указан некорректный день недели");}
+}
 Console.WriteLine("Введите номер задания");
 int x = int.Parse(Console.ReadLine());
 if (x == 10)
@@ -37,6 +55,10 @@ if (x == 10)
 if (x == 13)
     {
     Problem13 ();
+    return;}
+if (x == 15)
+    {
+    Problem15 ();
     return;}
 else 
     {
