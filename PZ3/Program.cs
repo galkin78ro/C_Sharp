@@ -1,59 +1,32 @@
-﻿void Problem10 ()
+﻿void Problem19 ()
 {
     Console.WriteLine("Программа для проверки пятизначного числа на палиндромомность");
-    Console.WriteLine("Введите пятизначное число");
+    Console.WriteLine("Введите положительное пятизначное число");
     int y = int.Parse(Console.ReadLine());
     if ( y is > 9999 and < 100000 )
     {   
-        string str = y.ToString();
-        int[] b = new int[str.Length];
-        for ( int i = 0; i < str.Length; i++)
+        int y1 = y / 10000;
+        int y2 = y % 10000 / 1000;
+        int y3 = y % 1000 / 100;
+        int y4 = y % 100 /10;
+        int y5 = y % 10;
+        if ( y1 == y5 & y2 == y4 ) 
         {
-            b[i] = int.Parse(str[i].ToString());
+            Console.WriteLine("Введенное число является палиндромнным");
+            return;
         }
-        int l_i = 0;
-        int r_i = 4;
-        while ( l_i < r_i )
-        {
-            if ( b[l_i] == b[r_i] )
-            {
-                l_i = ( l_i + 1 );
-                r_i = ( r_i - 1 );
-            }
-            else
-            {
-                Console.WriteLine( " - " );
-                return;
-            }
-        }
-        Console.WriteLine(" + " );
-        
-        
-    }else 
-        { 
+        Console.WriteLine("Введенное число не является палиндромнным");
+        return;
+    }
+    else 
+    { 
         Console.WriteLine("Введено недопустимое число");
-        }
+    }
 }
 void Problem13 ()
 {
-    Console.WriteLine("Программа для вывода третьей цифры в числе большем 99");
-    Console.WriteLine("Введите число больше 99");
-    int y = int.Parse(Console.ReadLine());
-    if ( y > 99 )
-        { 
-        string str = y.ToString();
-        int[] b = new int[str.Length];
-        for ( int i = 0; i < str.Length; i++)
-            {
-            b[i] = int.Parse(str[i].ToString());
-            }
-        Console.WriteLine("В введенном числе, третья цифра - " + b[2] );
-        int tr = 12 + b[2];
-        Console.WriteLine( tr );
-        }
-    else
-        { 
-        Console.WriteLine("Введеное число меньше допустимого предела. Третья цифра отсутствует");}   
+    
+        Console.WriteLine("Введеное число меньше допустимого предела. Третья цифра отсутствует");   
 }
 void Problem15 ()
 {
@@ -75,9 +48,9 @@ void Problem15 ()
 }
 Console.WriteLine("Введите номер задания");
 int x = int.Parse(Console.ReadLine());
-if (x == 10)
+if (x == 19)
     {
-    Problem10 ();
+    Problem19 ();
     return;}
 if (x == 13)
     {
